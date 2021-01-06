@@ -38,7 +38,9 @@ clearButton.addEventListener("click", function() {
 rightSideContainer.addEventListener("click", deleteCard);
 rightSideContainer.addEventListener("click", disableAllButtons);
 submitGuessButton.addEventListener("click", clickSubmitButton);
-updateButton.addEventListener("click", clickUpdateButton);
+updateButton.addEventListener("click", function() {
+  clickUpdateButton(event);
+});
 
 function addCard(guessInput, winner) {
   var player1 = player1NameInput.value;
@@ -57,7 +59,7 @@ function addCard(guessInput, winner) {
         <div class="card-line"></div>
       </div>
       <div class="card-footer">
-        <p><span id="number-of-guesses">${countGuesses()}</span> GUESSES</p>
+        <p><span class="guess-count" id="number-of-guesses">${countGuesses()}</span> GUESSES</p>
         <button class="close-button">X</button>
       </div>
     </section>`;
@@ -148,7 +150,8 @@ function clickSubmitButton() {
   countGuesses();
 };
 
-function clickUpdateButton() {
+function clickUpdateButton(event) {
+  event.preventDefault();
   var isMinVaild = checkMinRange();
   if (isMinVaild === false) {
     minError.style.display = "block";

@@ -10,18 +10,17 @@
   font-family: 'Open Sans', sans-serif;
 }
 
+/* ***** HEADER ***** */
+
 header {
   background-color: #404041;
   text-align: center;
+  padding: 0 0 15px 0;
+  margin: 0;
 }
 
 h1 {
   color: #DD1972;
-  margin: 0;
-}
-
-header {
-  padding: 0 0 15px 0;
   margin: 0;
 }
 
@@ -56,17 +55,35 @@ header {
   width: 100px;
 }
 
+/* ***** MAIN LAYOUT ***** */
+
 main {
   color: #6e6e6e;
   display: flex;
 }
 
-article {
+article,
+aside {
   width: 50%;
 }
 
 .left-side {
   background-color: #f7f7f7;
+}
+
+.right-side {
+ background-color: #D1D2D4;
+ border: solid #6E6E6E;
+ border-width: 0 0 0 2px;
+ padding: 20px;
+}
+
+/* ***** FORMS ***** */
+
+form {
+  background-color: #ffffff;
+  border: 1px solid #d0d2d3;
+  margin: 2% 2%;
 }
 
 h2 {
@@ -109,26 +126,9 @@ h2 {
   margin-right: 10px;
 }
 
-#min-range {
+.new-range {
   font-weight: 700;
   text-decoration: underline;
-}
-
-#max-range {
-  font-weight: 700;
-  text-decoration: underline;
-}
-
-#update-button {
-  background-color: #6e6e6e;
-  border-radius: 20px;
-  color: #ffffff;
-  font-size: 15px;
-  font-weight: bold;
-  height: 40px;
-  margin-left: 30px;
-  margin-top: auto;
-  width: 130px;
 }
 
 .player-header{
@@ -176,17 +176,25 @@ h2 {
   width: 100%;
 }
 
+/* ***** BUTTONS ***** */
+
 .player-box-buttons {
   padding: 2%;
 }
 
-.player-box-border {
-  background-color: #ffffff;
-  border: 1px solid #d0d2d3;
-  margin: 2% 2%;
+.set-range-button {
+  background-color: #6e6e6e;
+  border-radius: 20px;
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: bold;
+  height: 40px;
+  margin-left: 30px;
+  margin-top: auto;
+  width: 130px;
 }
 
-#submit-guess-button {
+.game-button {
   background-color: #6e6e6e;
   border-radius: 20px;
   color: #ffffff;
@@ -196,57 +204,16 @@ h2 {
   width: 32%;
 }
 
-#reset-game-button {
-  background-color: #6e6e6e;
-  border-radius: 20px;
-  color: #ffffff;
-  font-size: 15px;
-  font-weight: bold;
-  height: 40px;
-  width: 32%;
-}
-
-#clear-game-button {
-  background-color: #6e6e6e;
-  border-radius: 20px;
-  color: #ffffff;
-  font-size: 15px;
-  font-weight: bold;
-  height: 40px;
-  width: 32%;
-}
-
-#update-button:hover {
+button:hover {
   background-color: #DD1972;
   cursor: pointer;
 }
 
-#reset-game-button:hover {
-  background-color: #DD1972;
-  cursor: pointer;
-}
-
-#clear-game-button:hover {
-  background-color: #DD1972;
-  cursor: pointer;
-}
-
-#submit-guess-button:hover {
-  background-color: #DD1972;
-  cursor: pointer;
-}
-
-#reset-game-button:disabled {
+button:disabled {
   background-color: #d0d2d3;
 }
 
-#clear-game-button:disabled {
-  background-color: #d0d2d3;
-}
-
-#submit-guess-button:disabled {
-  background-color: #d0d2d3;
-}
+/* ***** LATEST SCORE SECTION ***** */
 
 .latest-score-header {
  margin: 2% 10px;
@@ -264,7 +231,7 @@ h2 {
   border: 1px solid #d0d2d3;
 }
 
-#player1-number, #player2-number {
+.player-guess {
   color: #dd1972;
   font-size: 90px;
   font-weight: 700;
@@ -296,6 +263,8 @@ h2 {
   margin: 0 0 10px 0;
 }
 
+/* ***** ERROR MESSAGES ***** */
+
 img {
   margin: 0 5px 0 0;
   width: 15px;
@@ -306,12 +275,7 @@ img {
   display: none;
 }
 
-.right-side {
- background-color: #D1D2D4;
- border: solid #6E6E6E;
- border-width: 0 0 0 2px;
- padding: 20px;
-}
+/* ***** WINNER CARDS ***** */
 
 .card {
   background-color: #FFFFFF;
@@ -374,12 +338,13 @@ img {
   width: 30px;
 }
 
-#number-of-guesses {
+.guess-count {
   font-weight: 700;
   letter-spacing: 1px;
   text-shadow: .8px 0 #6E6E6E;
 }
 
+/* ***** MEDIA QUERIES ***** */
 @media screen and (max-width: 870px) {
   main {
     display: block;
@@ -453,7 +418,7 @@ img {
     width: 100%;
   }
 
-  #update-button {
+  .set-range-button {
     margin: 3px;
     width: 32%
   }
@@ -470,7 +435,7 @@ img {
     width: 100%;
   }
 
-  #reset-game-button, #clear-game-button, #submit-guess-button {
+  .game-button {
     width: 100%;
     margin: 3px;
   }
