@@ -1,32 +1,27 @@
 var guessCount = 0;
 var randomNumber = null;
 
-var clearButton = document.getElementById("clear-game-button");
-var game1Card = document.querySelector(".game1-card");
-var game1Winner = document.querySelector(".game1-winner");
-var guess1Error = document.querySelector(".guess1-error");
-var guess2Error =document.querySelector(".guess2-error");
-var maxError = document.querySelector(".max-error");
+var cardContainer = document.getElementById("card-container");
+var guess1Error = document.getElementById("guess1-error");
+var guess2Error =document.getElementById("guess2-error");
+var maxError = document.getElementById("max-error");
 var maxRangeInput = document.getElementById("max-range-input");
 var maxRangeText = document.getElementById("max-range");
-var minError = document.querySelector(".min-error");
+var minError = document.getElementById("min-error");
 var minRangeInput = document.getElementById("min-range-input");
 var minRangeText = document.getElementById("min-range");
-var name1Error = document.querySelector(".name1-error");
-var name2Error = document.querySelector(".name2-error");
-var playerBox = document.querySelector(".player-box");
+var name1Error = document.getElementById("name1-error");
+var name2Error = document.getElementById("name2-error");
 var player1Feedback = document.getElementById("player1-feedback");
 var player1GuessInput = document.getElementById("player1-guess-textbox");
-var player1Name = document.querySelectorAll(".player1-name");
+var player1Name = document.getElementById("player1-name");
 var player1NameInput = document.getElementById("player1-name-textbox");
 var player1Number = document.getElementById("player1-number");
 var player2Feedback = document.getElementById("player2-feedback");
 var player2GuessInput = document.getElementById("player2-guess-textbox");
-var player2Name = document.querySelectorAll(".player2-name");
+var player2Name = document.getElementById("player2-name");
 var player2NameInput = document.getElementById("player2-name-textbox");
 var player2Number = document.getElementById("player2-number");
-var rightSide = document.querySelector(".right-side");
-var resetButton = document.getElementById("reset-game-button");
 var submitGuessButton = document.getElementById("submit-guess-button");
 var updateButton = document.getElementById("update-button");
 
@@ -40,7 +35,7 @@ updateButton.addEventListener("click", function() {
 
 submitGuessButton.addEventListener("click", submitGuess);
 
-rightSide.addEventListener("click", deleteCard);
+cardContainer.addEventListener("click", deleteCard);
 
 function getRandomNumber(min, max) {
   randomNumber = Math.floor(Math.random() * (+max - +min)) + +min;
@@ -173,7 +168,7 @@ function checkWinner() {
 }
 
 function addCard(winner) {
-  rightSide.innerHTML +=
+  cardContainer.innerHTML +=
     `<section class="card">
       <div class="card-header">
         <p class="player1-name">${player1NameInput.value}</p>

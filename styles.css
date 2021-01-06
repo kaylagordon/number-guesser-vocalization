@@ -291,7 +291,7 @@ img {
   justify-content: space-between;
 }
 
-.player1-name, .player2-name {
+.player-name {
   font-weight: 700;
   margin: 4px;
   letter-spacing: .8px;
