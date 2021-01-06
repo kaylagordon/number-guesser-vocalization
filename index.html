@@ -24,14 +24,14 @@
           <section class="range-box min-range-section">
             <label for="min-range-input">Min Range</label>
             <input id="min-range-input" class="range-textbox textbox" type="text">
-            <div class="error-message min-error">
+            <div class="error-message hidden min-error">
               <p><img src="error-icon.svg" alt="error warning"/> Too high!</p>
             </div>
           </section>
           <section class="range-box">
             <label for="max-range-input">Max Range</label>
             <input id="max-range-input" class="range-textbox textbox" type="text">
-            <div class="error-message max-error">
+            <div class="error-message hidden max-error">
               <p><img src="error-icon.svg" alt="error warning"/> Too low!</p>
             </div>
           </section>
@@ -46,14 +46,14 @@
               <div class="name-box">
                 <label for="player1-name-textbox">Name</label>
                 <input id="player1-name-textbox" class="name-textbox  textbox" type="text">
-                <div class="error-message name1-error">
+                <div class="error-message hidden name1-error">
                   <p><img src="error-icon.svg" alt="error warning"/> Enter a name.</p>
                 </div>
               </div>
               <div class="guess-box">
                 <label for="player1-guess-textbox">Guess</label>
                 <input id="player1-guess-textbox" class="guess-textbox  textbox" type="text">
-                <div class="error-message guess1-error">
+                <div class="error-message hidden guess1-error">
                   <p><img src="error-icon.svg" alt="error warning"/> Enter a valid number.</p>
                 </div>
               </div>
@@ -63,14 +63,14 @@
               <div class="name-box">
                 <label for="player2-name-textbox">Name</label>
                 <input id="player2-name-textbox" class="name-textbox  textbox" type="text">
-                <div class="error-message name2-error">
+                <div class="error-message hidden name2-error">
                   <p><img src="error-icon.svg" alt="error warning"/> Enter a name.</p>
                 </div>
               </div>
               <div class="guess-box">
                 <label for="player2-guess-textbox">Guess</label>
                 <input id="player2-guess-textbox" class="guess-textbox  textbox" type="text"><br>
-                <div class="error-message guess2-error">
+                <div class="error-message hidden guess2-error">
                   <p><img src="error-icon.svg" alt="error warning"/> Enter a valid number.</p>
                 </div>
                </div>
@@ -78,8 +78,8 @@
           </section>
           <section class="player-box-buttons">
             <button class="game-button" id="submit-guess-button">SUBMIT GUESS</button>
-            <button class="game-button" type="reset" id="reset-game-button" disabled>RESET GAME</button>
-            <button class="game-button" id="clear-game-button" disabled>CLEAR GAME</button>
+            <!-- <button class="game-button" type="reset" id="reset-game-button" disabled>RESET GAME</button>
+            <button class="game-button" id="clear-game-button" disabled>CLEAR GAME</button> -->
           </section>
         </form>
         <section class="latest-score">

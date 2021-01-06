@@ -272,7 +272,7 @@ img {
 
 .error-message {
   color: #DD1972;
-  display: none;
+  display: block;
 }
 
 /* ***** WINNER CARDS ***** */
@@ -343,6 +343,13 @@ img {
   letter-spacing: 1px;
   text-shadow: .8px 0 #6E6E6E;
 }
+
+/* ***** HIDDEN CLASS ***** */
+
+.hidden {
+  display: none;
+}
+
 
 /* ***** MEDIA QUERIES ***** */
 @media screen and (max-width: 870px) {
@@ -458,4 +465,4 @@ img {
     flex-direction: column;
     justify-content: space-around;
   }
-};
+}
