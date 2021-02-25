@@ -3,7 +3,7 @@ var randomNumber = null;
 
 var cardContainer = document.getElementById("card-container");
 var guess1Error = document.getElementById("guess1-error");
-var guess2Error =document.getElementById("guess2-error");
+var guess2Error = document.getElementById("guess2-error");
 var maxError = document.getElementById("max-error");
 var maxRangeInput = document.getElementById("max-range-input");
 var maxRangeText = document.getElementById("max-range");
@@ -136,9 +136,7 @@ function increaseGuesses() {
 };
 
 function updatePlayerName(name, nameInput) {
-  for (var i = 0; i < name.length; i++) {
-  name[i].innerText = nameInput.value;
-  }
+  name.innerText = nameInput.value;
 };
 
 function changeCurrentGuess() {
@@ -190,6 +188,6 @@ function addCard(winner) {
 
 function deleteCard(event) {
   if (event.target.classList.contains("close-button")) {
-     event.target.closest("section").remove();
+    event.target.closest("section").remove();
   }
 };
