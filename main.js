@@ -1,5 +1,5 @@
 var guessCount = 0;
-var randomNumber;
+var winningNumber;
 
 var cardContainer = document.getElementById("card-container");
 var guess1Error = document.getElementById("guess1-error");
@@ -26,7 +26,7 @@ var submitGuessButton = document.getElementById("submit-guess-button");
 var updateButton = document.getElementById("update-button");
 
 window.addEventListener("load", function() {
-  getRandomNumber(1, 100);
+  randomizeWinningNumber(1, 100);
 });
 
 updateButton.addEventListener("click", function() {
@@ -39,8 +39,8 @@ cardContainer.addEventListener("click", function() {
   deleteCard(event);
 });
 
-function getRandomNumber(min, max) {
-  randomNumber = Math.floor(Math.random() * (max - min)) + min;
+function randomizeWinningNumber(min, max) {
+  winningNumber = Math.floor(Math.random() * (max - min)) + min;
 };
 
 function show(element) {
@@ -64,7 +64,7 @@ function updateRange(event) {
   hide(maxError);
 
   changeRangeText();
-  getRandomNumber(minRangeInput.value, maxRangeInput.value);
+  randomizeWinningNumber(minRangeInput.value, maxRangeInput.value);
 };
 
 function checkValidRange() {
@@ -148,9 +148,9 @@ function changeCurrentGuess() {
 };
 
 function updateFeedback(guessInput, feedback) {
-  if (parseInt(guessInput.value) > randomNumber) {
+  if (parseInt(guessInput.value) > winningNumber) {
     feedback.innerText = "That's too high";
-  } else if (parseInt(guessInput.value) < randomNumber) {
+  } else if (parseInt(guessInput.value) < winningNumber) {
     feedback.innerText = "That's too low";
   } else {
     feedback.innerText = "BOOM!";
