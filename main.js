@@ -1,5 +1,5 @@
 var guessCount = 0;
-var randomNumber = null;
+var randomNumber;
 
 var cardContainer = document.getElementById("card-container");
 var guess1Error = document.getElementById("guess1-error");
@@ -40,7 +40,7 @@ cardContainer.addEventListener("click", function() {
 });
 
 function getRandomNumber(min, max) {
-  randomNumber = Math.floor(Math.random() * (+max - +min)) + +min;
+  randomNumber = Math.floor(Math.random() * (max - min)) + min;
 };
 
 function show(element) {
