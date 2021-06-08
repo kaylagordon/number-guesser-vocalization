@@ -35,7 +35,9 @@ updateButton.addEventListener("click", function() {
 
 submitGuessButton.addEventListener("click", submitGuess);
 
-cardContainer.addEventListener("click", deleteCard);
+cardContainer.addEventListener("click", function() {
+  deleteCard(event);
+});
 
 function getRandomNumber(min, max) {
   randomNumber = Math.floor(Math.random() * (+max - +min)) + +min;
