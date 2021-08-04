@@ -23,37 +23,37 @@
         <section class="set-range">
           <section class="range-box min-range-section">
             <label for="min-range-input">Min Range</label>
-            <input id="min-range-input" class="range-textbox textbox" type="text">
-            <div class="error-message hidden" id="min-error">
+            <input id="minRangeInput" class="range-textbox textbox" type="text">
+            <div class="error-message hidden" id="minError">
               <p><img src="error-icon.svg" alt="error warning"/> Too high!</p>
             </div>
           </section>
           <section class="range-box">
             <label for="max-range-input">Max Range</label>
-            <input id="max-range-input" class="range-textbox textbox" type="text">
-            <div class="error-message hidden" id="max-error">
+            <input id="maxRangeInput" class="range-textbox textbox" type="text">
+            <div class="error-message hidden" id="maxError">
               <p><img src="error-icon.svg" alt="error warning"/> Too low!</p>
             </div>
           </section>
-          <button class="set-range-button" id="update-button">UPDATE</button>
+          <button class="set-range-button" id="updateButton">UPDATE</button>
         </form>
         </section>
         <form>
           <section class="player-box">
-            <p class="name-paragraph">The Current Range is <span class="new-range" id="min-range">1</span> to <span class="new-range" id="max-range">100</span>.</p>
+            <p class="name-paragraph">The Current Range is <span class="new-range" id="minRange">1</span> to <span class="new-range" id="maxRange">100</span>.</p>
             <h2 class="player-header">Challenger 1</h2>
             <div class="player-inputs">
               <div class="name-box">
                 <label for="player1-name-textbox">Name</label>
-                <input id="player1-name-textbox" class="name-textbox  textbox" type="text">
-                <div class="error-message hidden" id="name1-error">
+                <input id="player1NameTextbox" class="name-textbox  textbox" type="text">
+                <div class="error-message hidden" id="name1Error">
                   <p><img src="error-icon.svg" alt="error warning"/> Enter a name.</p>
                 </div>
               </div>
               <div class="guess-box">
                 <label for="player1-guess-textbox">Guess</label>
-                <input id="player1-guess-textbox" class="guess-textbox  textbox" type="text">
-                <div class="error-message hidden" id="guess1-error">
+                <input id="player1GuessTextbox" class="guess-textbox  textbox" type="text">
+                <div class="error-message hidden" id="guess1Error">
                   <p><img src="error-icon.svg" alt="error warning"/> Enter a valid number.</p>
                 </div>
               </div>
@@ -62,46 +62,46 @@
             <div class="player-inputs">
               <div class="name-box">
                 <label for="player2-name-textbox">Name</label>
-                <input id="player2-name-textbox" class="name-textbox  textbox" type="text">
-                <div class="error-message hidden" id="name2-error">
+                <input id="player2NameTextbox" class="name-textbox  textbox" type="text">
+                <div class="error-message hidden" id="name2Error">
                   <p><img src="error-icon.svg" alt="error warning"/> Enter a name.</p>
                 </div>
               </div>
               <div class="guess-box">
                 <label for="player2-guess-textbox">Guess</label>
-                <input id="player2-guess-textbox" class="guess-textbox  textbox" type="text"><br>
-                <div class="error-message hidden" id="guess2-error">
+                <input id="player2GuessTextbox" class="guess-textbox  textbox" type="text"><br>
+                <div class="error-message hidden" id="guess2Error">
                   <p><img src="error-icon.svg" alt="error warning"/> Enter a valid number.</p>
                 </div>
                </div>
             </div>
           </section>
           <section class="player-box-buttons">
-            <button class="game-button" id="submit-guess-button">SUBMIT GUESS</button>
-            <!-- <button class="game-button" type="reset" id="reset-game-button" disabled>RESET GAME</button>
-            <button class="game-button" id="clear-game-button" disabled>CLEAR GAME</button> -->
+            <button class="game-button" id="submitGuessButton">SUBMIT GUESS</button>
+            <!-- <button class="game-button" type="reset" id="resetGameButton" disabled>RESET GAME</button>
+            <button class="game-button" id="clearGameButton" disabled>CLEAR GAME</button> -->
           </section>
         </form>
         <section class="latest-score">
           <h2 class="latest-score-header">Latest Score</h2>
           <section class="latest-score-boxes">
             <section class="player1-guess">
-              <p class="player-name" id="player1-name">Challenger 1 Name</p>
+              <p class="player-name" id="player1Name">Challenger 1 Name</p>
               <p class="current-guess">current guess</p>
-              <p class="player-guess" id="player1-number">-</p>
-              <p id="player1-feedback" class="feedback"></p>
+              <p class="player-guess" id="player1Number">-</p>
+              <p id="player1Feedback" class="feedback"></p>
             </section>
             <p class="guess-box-line"></p>
             <section class="player2-guess">
-              <p class="player-name" id="player2-name">Challenger 2 Name</p>
+              <p class="player-name" id="player2Name">Challenger 2 Name</p>
               <p class="current-guess">current guess</p>
-              <p class="player-guess" id="player2-number">-</p>
-              <p id="player2-feedback" class="feedback"></p>
+              <p class="player-guess" id="player2Number">-</p>
+              <p id="player2Feedback" class="feedback"></p>
             </section>
           </section>
         </section>
       </article>
-      <aside class="right-side" id="card-container">
+      <aside class="right-side" id="cardContainer">
       </aside>
     </main>
     <script type="text/javascript" src="main.js"></script>
