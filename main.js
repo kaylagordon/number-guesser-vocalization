@@ -1,46 +1,47 @@
 var guessCount = 0;
 var winningNumber;
 
-var cardContainer = document.getElementById("card-container");
-var guess1Error = document.getElementById("guess1-error");
-var guess2Error = document.getElementById("guess2-error");
-var maxError = document.getElementById("max-error");
-var maxRangeInput = document.getElementById("max-range-input");
-var maxRangeText = document.getElementById("max-range");
-var minError = document.getElementById("min-error");
-var minRangeInput = document.getElementById("min-range-input");
-var minRangeText = document.getElementById("min-range");
-var name1Error = document.getElementById("name1-error");
-var name2Error = document.getElementById("name2-error");
-var player1Feedback = document.getElementById("player1-feedback");
-var player1GuessInput = document.getElementById("player1-guess-textbox");
-var player1Name = document.getElementById("player1-name");
-var player1NameInput = document.getElementById("player1-name-textbox");
-var player1Number = document.getElementById("player1-number");
-var player2Feedback = document.getElementById("player2-feedback");
-var player2GuessInput = document.getElementById("player2-guess-textbox");
-var player2Name = document.getElementById("player2-name");
-var player2NameInput = document.getElementById("player2-name-textbox");
-var player2Number = document.getElementById("player2-number");
-var submitGuessButton = document.getElementById("submit-guess-button");
-var updateButton = document.getElementById("update-button");
+var cardContainer = document.getElementById("cardContainer");
+var guess1Error = document.getElementById("guess1Error");
+var guess2Error = document.getElementById("guess2Error");
+var maxError = document.getElementById("maxError");
+var maxRangeInput = document.getElementById("maxRangeInput");
+var maxRangeText = document.getElementById("maxRange");
+var minError = document.getElementById("minError");
+var minRangeInput = document.getElementById("minRangeInput");
+var minRangeText = document.getElementById("minRange");
+var name1Error = document.getElementById("name1Error");
+var name2Error = document.getElementById("name2Error");
+var player1Feedback = document.getElementById("player1Feedback");
+var player1GuessInput = document.getElementById("player1GuessTextbox");
+var player1Name = document.getElementById("player1Name");
+var player1NameInput = document.getElementById("player1NameTextbox");
+var player1Number = document.getElementById("player1Number");
+var player2Feedback = document.getElementById("player2Feedback");
+var player2GuessInput = document.getElementById("player2GuessTextbox");
+var player2Name = document.getElementById("player2Name");
+var player2NameInput = document.getElementById("player2NameTextbox");
+var player2Number = document.getElementById("player2Number");
+var submitGuessButton = document.getElementById("submitGuessButton");
+var updateButton = document.getElementById("updateButton");
 
 window.addEventListener("load", function() {
   randomizeWinningNumber(1, 100);
 });
 
-updateButton.addEventListener("click", function() {
+updateButton.addEventListener("click", function(event) {
   updateRange(event);
 });
 
 submitGuessButton.addEventListener("click", submitGuess);
 
-cardContainer.addEventListener("click", function() {
+cardContainer.addEventListener("click", function(event) {
   deleteCard(event);
 });
 
 function randomizeWinningNumber(min, max) {
-  winningNumber = Math.floor(Math.random() * (max - min)) + min;
+  winningNumber = Math.floor(Math.random() * (max - min) + min);
+  console.log(winningNumber)
 };
 
 function show(element) {
@@ -126,7 +127,7 @@ function checkInputs() {
 }
 
 function checkGuess(playerGuessInput) {
-  if (!parseInt(playerGuessInput.value) || parseInt(playerGuessInput.value) > parseInt(maxRangeInput.value) || parseInt(playerGuessInput.value) < parseInt(minRangeInput.value)) {
+  if (!parseInt(playerGuessInput.value) || parseInt(playerGuessInput.value) > parseInt(maxRangeText.innerText) || parseInt(playerGuessInput.value) < parseInt(minRangeText.innerText)) {
     return false;
   } else {
     return true;
@@ -134,7 +135,7 @@ function checkGuess(playerGuessInput) {
 };
 
 function increaseGuesses() {
-  guessCount += 2;
+  guessCount += 1;
 };
 
 function updatePlayerName(name, nameInput) {
