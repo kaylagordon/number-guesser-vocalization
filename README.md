@@ -7,4 +7,4 @@
 * `cd` into the directory
 * Run `open index.html` to view in browser
 
-View the app here: https://kaylaewood.github.io/number-guesser-vocalization/
+View the app here: https://kaylagordon.github.io/number-guesser-vocalization/
